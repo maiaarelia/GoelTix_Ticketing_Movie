@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/baseline_arrow_back" />
+
+        <TextView
+            android:id="@+id/txt_detail"
+            android:layout_toRightOf="@+id/img_back"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#D54D35"
+            android:textSize="25sp"
+            android:textStyle="bold">
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pilih_bioskop"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="75dp"
+            android:layout_height="wrap_content"
+            android:text="Pilih Bioskop"
+            android:fontFamily="@font/poppins_bold">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinBioskop"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/pilih_bioskop"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#DDDDDD"
+            />
+
+        <TextView
+            android:id="@+id/pilih_seat"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/spinBioskop"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="Pilih Jenis Seat"
+            android:fontFamily="@font/poppins_bold">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinSeat"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/pilih_seat"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#DDDDDD"
+            />
+
+        <LinearLayout
+            android:id="@+id/pick_date"
+            android:layout_below="@id/spinSeat"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Tanggal"
+                android:paddingRight="0dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/mdy"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dd/mm/yy" />
+            <Button
+                android:id="@+id/button_tgl"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/baseline_date_range_24">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pick_time"
+            android:layout_below="@id/pick_date"
+            android:layout_alignStart="@id/pick_date"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Waktu"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:paddingRight="0dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/time"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_marginEnd="10dp"/>
+            <Button
+                android:id="@+id/button_time"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/baseline_access_time_24"
+                android:layout_marginEnd="30dp">
+            </Button>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/jumlah_kursi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih  Jumlah Kursi"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/pick_time"
+            android:layout_alignStart="@id/spinBioskop"
+            android:layout_marginTop="30dp"/>
+        <LinearLayout
+            android:id="@+id/jumlah_kursi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/spinSeat"
+            android:orientation="horizontal"
+            android:layout_below="@id/spinSeat"
+            android:gravity="center"
+            android:layout_alignTop="@id/jumlah_kursi_title">
+            <Button
+                android:id="@+id/btn_min"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/baseline_horizontal_rule_24"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/jumlah_kursi_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20dp"
+                android:layout_marginRight="10dp"/>
+            <Button
+                android:id="@+id/btn_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/baseline_add_24"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_below="@id/jumlah_kursi_title"
+            android:layout_alignStart="@id/pilih_bioskop"
+            android:layout_marginTop="30dp"
+            android:id="@+id/jenis_kursi_pilihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kursi Pilihan">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/hitung_harga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/jumlah_kursi"
+            android:layout_marginTop="30dp"
+            android:layout_alignEnd="@id/spinBioskop"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/harga_kursi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp0"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x"/>
+            <TextView
+                android:id="@+id/jumlah_kursi_fix2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/garis"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_below="@id/hitung_harga"
+            android:layout_marginTop="10dp">
+        </View>
+
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/garis"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Actual Pay"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/rupiah2"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/garis"
+            android:layout_toRightOf="@id/pay"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rp.0" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/add_payment"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/pay"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="Add Payment Method"
+            android:fontFamily="@font/poppins_bold">
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/spinpayment"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/add_payment"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#DDDDDD"
+            />
+
+        <LinearLayout
+            android:id="@+id/dropdownLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinpayment"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Spinner
+                android:id="@+id/spinner1_payment"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round"
+                android:backgroundTint="#DDDDDD" />
+
+
+            <EditText
+                android:id="@+id/spinner2_"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:hint="Account Number"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_light"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round"
+                android:backgroundTint="#DDDDDD" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_getTicket"
+            android:layout_width="380dp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/dropdownLayout"
+            android:layout_height="60dp"
+            android:text="Get Ticket"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#D54D35"
+            android:textSize="18sp"/>
+</RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

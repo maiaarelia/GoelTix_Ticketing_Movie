@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">UTS_AreliaMaiaAshary</string>
+
+
+    <array name="bioskop">
+        <item>Empire XXI</item>
+        <item>Cinepolis Lippo Plaza Jogja</item>
+        <item>CGV Transmart Maguwo</item>
+        <item>CGV Pakuwon Mall</item>
+        <item>CGV J-Walk</item>
+        <item>Sleman City Hall XXI</item>
+        <item>Jogja City XXI</item>
+        <item>Ambarrukmo XXI</item>
+    </array>
+
+    <array name="jenisSeat">
+        <item>--Pilih Seat--</item>
+        <item>Reguler Seat</item>
+        <item>Premiere Seat</item>
+        <item>Exclusive Seat</item>
+    </array>
+
+    <array name="metode_pembayaran">
+        <item>Transfer Bank</item>
+        <item>E-Wallet</item>
+    </array>
+
+    <array name="Bank">
+        <item>BCA</item>
+        <item>MANDIRI</item>
+        <item>BTN</item>
+        <item>BRI</item>
+        <item>BNI</item>
+        <item>BTPN</item>
+    </array>
+    <array name="E_Money">
+        <item>ShopeePay</item>
+        <item>Gopay</item>
+        <item>Dana</item>
+        <item>Ovo</item>
+    </array>
+
+
+</resources>
